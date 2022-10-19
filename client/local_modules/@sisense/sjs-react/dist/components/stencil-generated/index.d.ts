@@ -1,0 +1,6 @@
+/// <reference types="react" />
+import type { JSX } from '@sisense/sjs';
+export declare const SisenseApp: import("react").ForwardRefExoticComponent<JSX.SisenseApp & Omit<import("react").HTMLAttributes<HTMLSisenseAppElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLSisenseAppElement>>;
+export declare const SisenseDashboard: import("react").ForwardRefExoticComponent<JSX.SisenseDashboard & Omit<import("react").HTMLAttributes<HTMLSisenseDashboardElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLSisenseDashboardElement>>;
+export declare const SisenseFilters: import("react").ForwardRefExoticComponent<JSX.SisenseFilters & Omit<import("react").HTMLAttributes<HTMLSisenseFiltersElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLSisenseFiltersElement>>;
+export declare const SisenseWidget: import("react").ForwardRefExoticComponent<JSX.SisenseWidget & Omit<import("react").HTMLAttributes<HTMLSisenseWidgetElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLSisenseWidgetElement>>;

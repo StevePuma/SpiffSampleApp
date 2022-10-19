@@ -1,0 +1,30 @@
+{
+    "new-trial-dev": {
+        "SISENSE_URL": "https://new-trial.sisense.com",
+        "DASHBOARD_ID": "6321e13cc172a500361095e2",
+        "SJS_DASHBOARD" : {
+            "DASHBOARD_ID": "6321e13cc172a500361095e2",
+            "WIDGET1_ID": "6321e13cc172a500361095e4",
+            "WIDGET2_ID": "6321e13cc172a500361095e3",
+            "WIDGET3_ID": "6321e13cc172a500361095e5",
+            "WIDGET4_ID": "6321e13cc172a500361095e6",
+            "WIDGET5_ID": "6321e13cc172a500361095e8"
+        },
+        "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
+        "DARK_THEME_ID": "634ecbf6e9a102003742e801"
+    },
+    "new-trial-prod": {
+        "SISENSE_URL": "https://new-trial.sisense.com",
+        "DASHBOARD_ID": "6321e13cc172a500361095e2",
+        "SJS_DASHBOARD" : {
+            "DASHBOARD_ID": "6321e13cc172a500361095e2",
+            "WIDGET1_ID": "6321e13cc172a500361095e4",
+            "WIDGET2_ID": "6321e13cc172a500361095e3",
+            "WIDGET3_ID": "6321e13cc172a500361095e5",
+            "WIDGET4_ID": "6321e13cc172a500361095e6",
+            "WIDGET5_ID": "6321e13cc172a500361095e8"
+        },
+        "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
+        "DARK_THEME_ID": "634ecbf6e9a102003742e801"
+    }
+}

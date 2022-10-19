@@ -1,0 +1,99 @@
+{
+  "name": "sisense-demo-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fullcalendar/bootstrap": "^5.10.1",
+    "@fullcalendar/core": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/list": "^5.10.1",
+    "@fullcalendar/react": "^5.10.1",
+    "@fullcalendar/timegrid": "^5.10.1",
+    "@hookform/resolvers": "^2.8.8",
+    "@redux-saga/core": "^1.1.3",
+    "@sisense/sjs": "file:local_modules/@sisense/sjs",
+    "@sisense/sjs-react": "file:local_modules/@sisense/sjs-react",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/html-to-draftjs": "^1.4.0",
+    "@types/js-cookie": "^3.0.2",
+    "@types/react": "^17.0.20",
+    "@types/react-datepicker": "^4.3.4",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-draft-wysiwyg": "^1.13.4",
+    "@types/react-redux": "^7.1.22",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-table": "^7.7.9",
+    "@types/redux-saga": "^0.10.5",
+    "axios": "^0.25.0",
+    "axios-mock-adapter": "^1.20.0",
+    "bootstrap": "^5.1.3",
+    "classnames": "^2.3.1",
+    "custom": "^0.0.0",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "eslint-config-react-app": "^7.0.1",
+    "html-to-draftjs": "^1.5.0",
+    "i18next": "^21.6.10",
+    "i18next-browser-languagedetector": "^6.1.3",
+    "icons": "^1.0.0",
+    "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
+    "patch-package": "^6.4.7",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-bootstrap": "^2.1.1",
+    "react-countdown": "^2.3.2",
+    "react-datepicker": "^4.6.0",
+    "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.14.7",
+    "react-dropzone": "^12.0.4",
+    "react-hook-form": "^7.25.1",
+    "react-i18next": "^11.15.3",
+    "react-image-lightbox": "^5.1.4",
+    "react-redux": "^7.2.6",
+    "react-responsive-masonry": "^2.1.4",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.0",
+    "react-select": "^5.2.2",
+    "react-table": "^7.7.0",
+    "redux": "^4.2.0",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.54.7",
+    "simplebar-react": "^2.3.6",
+    "typescript": "^4.4.2",
+    "variables": "^1.0.1",
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/draftjs-to-html": "^0.8.1",
+    "@types/react-beautiful-dnd": "^13.1.2",
+    "prettier": "2.5.1"
+  }
+}

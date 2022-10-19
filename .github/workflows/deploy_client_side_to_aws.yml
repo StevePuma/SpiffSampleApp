@@ -1,0 +1,78 @@
+name: Deploy Client Side
+on:
+    workflow_dispatch:
+        inputs:
+            branch_ref:
+                description: Deploy using branch
+                default: master
+                required: true
+            version:
+                description: App version label
+                default: v1.1
+                required: true
+            deploy_env:
+                description: 'Environment'
+                required: true
+                default: 'dev'
+                type: choice
+                options:
+                    - eu
+                    - us
+                    - dev
+
+env:
+    DEPLOY_ENV: ${{ inputs.deploy_env }}
+    VERSION: ${{ inputs.version }}
+    AWS_LIGHTSAIL_SERVICE_NAME: trial-magpie
+    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+    deploy:
+        name: Build and deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  ref: ${{ inputs.branch_ref }}
+            - name: Install Utilities
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y jq unzip
+            - name: Install AWS Client
+              run: |
+                  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+                  unzip awscliv2.zip
+                  sudo ./aws/install || true
+                  aws --version
+                  curl "https://s3.us-west-2.amazonaws.com/lightsailctl/latest/linux-amd64/lightsailctl" -o "lightsailctl"
+                  sudo mv "lightsailctl" "/usr/local/bin/lightsailctl"
+                  sudo chmod +x /usr/local/bin/lightsailctl
+            - name: Set AWS Region based on DEPLOY_ENV
+              run: |
+                  case ${{ inputs.deploy_env }} in
+                    dev) echo "AWS_REGION=ca-central-1" >> $GITHUB_ENV ;;
+                    us) echo "AWS_REGION=us-east-2" >> $GITHUB_ENV ;;
+                    eu) echo "AWS_REGION=eu-west-1" >> $GITHUB_ENV ;;
+                  esac
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                  aws-region: ${{ env.AWS_REGION }}
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            - name: Build Docker Image
+              run: docker build -f Dockerfile.prod -t ${{ env.AWS_LIGHTSAIL_SERVICE_NAME }}:release --build-arg NPM_TOKEN=${{ env.NPM_TOKEN }} --build-arg AWS_REGION=${{ env.AWS_REGION }} --build-arg DEPLOY_ENV=${{ env.DEPLOY_ENV }} --build-arg VERSION=${{ env.VERSION }} --build-arg TODAY=$(date -u +"%Y-%m-%d") .
+              working-directory: ./client
+            - name: Push and Deploy
+              run: |
+                  service_name=${{ env.AWS_LIGHTSAIL_SERVICE_NAME }}
+                  aws lightsail push-container-image \
+                    --region ${{ env.AWS_REGION }} \
+                    --service-name ${service_name} \
+                    --label ${service_name} \
+                    --image ${service_name}:release
+                  aws lightsail get-container-images --service-name ${service_name} | jq --raw-output ".containerImages[0].image" > image.txt
+                  jq --arg image $(cat image.txt) '.containers.trialmagpie.image = $image' ./client/container.template.json > container.json
+                  cat container.json
+                  aws lightsail create-container-service-deployment --service-name ${service_name} --cli-input-json file://$(pwd)/container.json

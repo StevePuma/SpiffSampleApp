@@ -1,0 +1,12 @@
+node_modules
+build
+.dockerignore
+Dockerfile
+Dockerfile.prod
+node_modules/
+*.log
+.idea
+.DS_Store
+build/
+coverage/
+.github

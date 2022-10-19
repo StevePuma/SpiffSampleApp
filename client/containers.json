@@ -1,0 +1,9 @@
+{
+    "codename-magpie": {
+      "image": ":trial-magpie.trial-magpie-container.1",
+      "ports": {
+        "80": "HTTP"
+      }
+    }
+  }
+  

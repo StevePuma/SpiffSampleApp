@@ -1,0 +1,8 @@
+// 
+// iframe.scss - to control Sisense SDK iframe
+//
+​
+// removes the line from the right hand side
+iframe[title="sisenseDashboard"] {
+    padding-right: 0px
+};

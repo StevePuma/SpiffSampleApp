@@ -1,0 +1,40 @@
+datamodels:
+    - e783d3af-92b2-486d-824b-ed65c8a54e98
+
+dashboards:
+    - 6321e13cc172a500361095e2
+    - 62fb0273f7a55500373aad75
+    - 62fd0d1cf7a55500373ab8f6
+    - 62fb052ef7a55500373aad83
+    - 62fb0bc7f7a55500373aadbb
+    - 62fd1d50f7a55500373abbbe
+
+plugins:
+    - BloX/BloX
+    - HistogramWidget/histogramwidget
+    - PluginUtils/PluginUtils
+    - PublishView/PublishView
+    - Quest/Quest
+    - SwitchDimension/SwitchDimension
+    - WidgetsTabber/WidgetsTabber
+    - WiserFilterWidget/WiserFilterWidget
+    - accordionPlugin/accordionPlugin
+    - aggregatedTable/aggregatedTable
+    - customBarColumnChart/customBarColumnChart
+    - customStyle/CustomStyle
+    - dynamicBuckets/dynamicBuckets
+    - dynamicElasticubes/dynamicElastiCubes
+    - filteredMeasure/filteredMeasure
+    - hideReportSchedule/hideReportSchedule
+    - hideTitles/hideTitles
+    - iFrameWidget/Comments
+    - jaqline/jaqline
+    - jumpToDashboard/jumpToDashboard
+
+themes:
+    - 62ffffbb79dbfe0036033513
+    - 62fffff679dbfe0036033516
+
+palettes:
+    - 62ffff8179dbfe0036033512
+    - 63038a4879dbfe0036033518

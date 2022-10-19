@@ -1,0 +1,27 @@
+{
+    "containers": {
+      "codenamemagpiebackend": {
+        "image": "",
+        "environment": {
+          "APP_ENV": "release",
+          "NODE_ENV": "production"
+        },
+        "ports": {
+          "5000": "HTTP"
+        }
+      }
+    },
+    "publicEndpoint": {
+      "containerName": "trialmagpiebackend",
+      "containerPort": 5000,
+      "healthCheck": {
+        "healthyThreshold": 2,
+        "unhealthyThreshold": 2,
+        "timeoutSeconds": 5,
+        "intervalSeconds": 10,
+        "path": "/",
+        "successCodes": "200-499"
+      }
+    }
+  }
+  

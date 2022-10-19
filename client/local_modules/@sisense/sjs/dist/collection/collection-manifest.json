@@ -1,0 +1,15 @@
+{
+  "entries": [
+    "./components/sisense-app/sisense-app.js",
+    "./components/sisense-dashboard/sisense-dashboard.js",
+    "./components/sisense-filters/sisense-filters.js",
+    "./components/sisense-widget/sisense-widget.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.15.1",
+    "typescriptVersion": "4.5.4"
+  },
+  "collections": [],
+  "bundles": []
+}

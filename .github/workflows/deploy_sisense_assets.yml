@@ -1,0 +1,34 @@
+name: Retrieve Sisense Assets
+on:
+    workflow_dispatch:
+        inputs:
+            sisense_url:
+                description: 'Sisense URL'
+                required: true
+                default: 'https://magpie-sisense-dev.sisensepoc.com/'
+
+env:
+    SISENSE_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+    SISENSE_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+    SISENSE_URL: ${{ inputs.sisense_url }}
+
+jobs:
+    resources:
+        name: Store assets from Sisense to Git Repo
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - uses: actions/setup-node@v1
+
+            - name: Fetch assets
+              run: python ./.github/workflows/sisense_assets_retrieve.py
+
+            - name: Update assets in git
+              uses: test-room-7/action-update-file@v1
+              with:
+                  file-path: ./**/*.*
+                  commit-msg: Update assets
+                  github-token: ${{ secrets.GITHUB_TOKEN }} # This is a default token that exists by default in the repository. I doesn't need to be created.
+                  allow-removing: true
+                  committer-name: Retrieve-Sisense-Assets-Workflow
