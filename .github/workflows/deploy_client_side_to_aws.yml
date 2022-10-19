@@ -4,11 +4,11 @@ on:
         inputs:
             branch_ref:
                 description: Deploy using branch
-                default: master
+                default: main
                 required: true
             version:
                 description: App version label
-                default: v1.1
+                default: v1.0
                 required: true
             deploy_env:
                 description: 'Environment'

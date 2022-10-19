@@ -4,7 +4,7 @@ on:
         inputs:
             branch_ref:
                 description: Deploy using branch
-                default: master
+                default: main
                 required: true
             deploy_env:
                 description: 'Environment'
