@@ -197,6 +197,10 @@ class APICore {
             Cookies.set('email', session.email, { domain: 'sisense.com' });
             Cookies.set('firstName', session.firstName, { domain: 'sisense.com' });
             Cookies.set('lastName', session.lastName, { domain: 'sisense.com' });
+
+            Cookies.set('email', session.email, { domain: 'lightsail.aws.amazon.com' });
+            Cookies.set('firstName', session.firstName, { domain: 'lightsail.aws.amazon.com' });
+            Cookies.set('lastName', session.lastName, { domain: 'lightsail.aws.amazon.com' });
             //duplicating cookies for localhost
             Cookies.set('email', session.email);
             Cookies.set('firstName', session.firstName);
@@ -207,6 +211,10 @@ class APICore {
             Cookies.remove('email');
             Cookies.remove('firstName');
             Cookies.remove('lastName');
+
+            Cookies.remove('email', { domain: 'lightsail.aws.amazon.com' });
+            Cookies.remove('firstName', { domain: 'lightsail.aws.amazon.com' });
+            Cookies.remove('lastName', { domain: 'lightsail.aws.amazon.com' });
 
             Cookies.remove('email', { domain: 'sisense.com' });
             Cookies.remove('firstName', { domain: 'sisense.com' });
