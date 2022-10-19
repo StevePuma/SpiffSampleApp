@@ -1,6 +1,6 @@
 {
     "containers": {
-      "codenamemagpiebackend": {
+      "trialmagpiebackend": {
         "image": "",
         "environment": {
           "APP_ENV": "release",

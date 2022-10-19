@@ -1,5 +1,5 @@
 {
-    "codename-magpie": {
+    "trial-magpie": {
       "image": ":trial-magpie-backend.trial-magpie-backend-container.1",
       "ports": {
         "5000": "HTTP"
