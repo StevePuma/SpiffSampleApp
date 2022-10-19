@@ -9,12 +9,11 @@ on:
             deploy_env:
                 description: 'Environment'
                 required: true
-                default: 'dev'
+                default: 'trial-dev'
                 type: choice
                 options:
-                    - eu
-                    - us
-                    - dev
+                    - trial-dev
+                    - trial-prod
 env:
     DEPLOY_ENV: ${{ inputs.deploy_env }}
     AWS_LIGHTSAIL_SERVICE_NAME: trial-magpie-backend

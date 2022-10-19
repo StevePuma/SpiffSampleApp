@@ -28,7 +28,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
         - Create a file named `.env` within the client folder as shown below
         - Add the following Environment variables
             ```
-            REACT_APP_DEPLOY_ENV=new-trial-dev
+            REACT_APP_DEPLOY_ENV=trial-dev
             REACT_APP_DEPLOY_DATE=1970-01-01
             REACT_APP_VERSION=2022.x
             GENERATE_SOURCEMAP=false
