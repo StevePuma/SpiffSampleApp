@@ -11,7 +11,7 @@ ARG DEPLOY_ENV
 ARG VERSION
 ARG TODAY
 
-COPY .npmrc .npmrc 
+#COPY .npmrc .npmrc 
 COPY package.json package-lock.json ./
 RUN npm install -g npm@8.9.0
 #RUN npm install --force
