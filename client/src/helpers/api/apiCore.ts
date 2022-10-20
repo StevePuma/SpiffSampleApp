@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 import config from '../../config';
+import regionalConfig from '../../config_region';
 
 // content type
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -194,13 +195,11 @@ class APICore {
     setLoggedInUser = (session: any) => {
         if (session){
             sessionStorage.setItem(AUTH_SESSION_KEY, JSON.stringify(session));
-            Cookies.set('email', session.email, { domain: 'sisense.com' });
-            Cookies.set('firstName', session.firstName, { domain: 'sisense.com' });
-            Cookies.set('lastName', session.lastName, { domain: 'sisense.com' });
+            Cookies.set('email', session.email, { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
+            Cookies.set('firstName', session.firstName, { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
+            Cookies.set('lastName', session.lastName, { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
+            console.debug(regionalConfig.HACKENDCOOKIEDOMAIN);
 
-            Cookies.set('email', session.email, { domain: 'lightsail.aws.amazon.com' });
-            Cookies.set('firstName', session.firstName, { domain: 'lightsail.aws.amazon.com' });
-            Cookies.set('lastName', session.lastName, { domain: 'lightsail.aws.amazon.com' });
             //duplicating cookies for localhost
             Cookies.set('email', session.email);
             Cookies.set('firstName', session.firstName);
@@ -212,13 +211,9 @@ class APICore {
             Cookies.remove('firstName');
             Cookies.remove('lastName');
 
-            Cookies.remove('email', { domain: 'lightsail.aws.amazon.com' });
-            Cookies.remove('firstName', { domain: 'lightsail.aws.amazon.com' });
-            Cookies.remove('lastName', { domain: 'lightsail.aws.amazon.com' });
-
-            Cookies.remove('email', { domain: 'sisense.com' });
-            Cookies.remove('firstName', { domain: 'sisense.com' });
-            Cookies.remove('lastName', { domain: 'sisense.com' });
+            Cookies.remove('email', { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
+            Cookies.remove('firstName', { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
+            Cookies.remove('lastName', { domain: regionalConfig.HACKENDCOOKIEDOMAIN });
         }
     };
     /**

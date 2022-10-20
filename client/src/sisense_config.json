@@ -11,7 +11,8 @@
             "WIDGET5_ID": "6321e13cc172a500361095e8"
         },
         "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
-        "DARK_THEME_ID": "634ecbf6e9a102003742e801"
+        "DARK_THEME_ID": "634ecbf6e9a102003742e801",
+        "HACKENDCOOKIEDOMAIN": "g0nq7fudte4oa.ca-central-1.cs.amazonlightsail.com"
     },
     "trial-prod": {
         "SISENSE_URL": "https://new-trial.sisense.com",
@@ -25,6 +26,7 @@
             "WIDGET5_ID": "6321e13cc172a500361095e8"
         },
         "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
-        "DARK_THEME_ID": "634ecbf6e9a102003742e801"
+        "DARK_THEME_ID": "634ecbf6e9a102003742e801",
+        "HACKENDCOOKIEDOMAIN": "g0nq7fudte4oa.ca-central-1.cs.amazonlightsail.com"
     }
 }
