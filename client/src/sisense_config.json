@@ -1,29 +1,29 @@
 {
     "trial-dev": {
-        "SISENSE_URL": "https://new-trial.sisense.com",
-        "DASHBOARD_ID": "6321e13cc172a500361095e2",
+        "SISENSE_URL": "https://spiff.sisense.com",
+        "DASHBOARD_ID": "64b5e9c71f5d990036f5d955",
         "SJS_DASHBOARD" : {
-            "DASHBOARD_ID": "6321e13cc172a500361095e2",
-            "WIDGET1_ID": "6321e13cc172a500361095e4",
-            "WIDGET2_ID": "6321e13cc172a500361095e3",
-            "WIDGET3_ID": "6321e13cc172a500361095e5",
-            "WIDGET4_ID": "6321e13cc172a500361095e6",
-            "WIDGET5_ID": "6321e13cc172a500361095e8"
+            "DASHBOARD_ID": "64b5e9c71f5d990036f5d955",
+            "WIDGET1_ID": "64b5e9c71f5d990036f5d95c",
+            "WIDGET2_ID": "64b5e9c71f5d990036f5d956",
+            "WIDGET3_ID": "64b5e9c71f5d990036f5d957",
+            "WIDGET4_ID": "64b5e9c71f5d990036f5d960",
+            "WIDGET5_ID": "64b5e9c71f5d990036f5d95a"
         },
         "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
         "DARK_THEME_ID": "634ecbf6e9a102003742e801",
         "HACKENDCOOKIEDOMAIN": "g0nq7fudte4oa.ca-central-1.cs.amazonlightsail.com"
     },
     "trial-prod": {
-        "SISENSE_URL": "https://new-trial.sisense.com",
-        "DASHBOARD_ID": "6321e13cc172a500361095e2",
+        "SISENSE_URL": "https://spiff.sisense.com",
+        "DASHBOARD_ID": "64b5e9c71f5d990036f5d955",
         "SJS_DASHBOARD" : {
-            "DASHBOARD_ID": "6321e13cc172a500361095e2",
-            "WIDGET1_ID": "6321e13cc172a500361095e4",
-            "WIDGET2_ID": "6321e13cc172a500361095e3",
-            "WIDGET3_ID": "6321e13cc172a500361095e5",
-            "WIDGET4_ID": "6321e13cc172a500361095e6",
-            "WIDGET5_ID": "6321e13cc172a500361095e8"
+            "DASHBOARD_ID": "64b5e9c71f5d990036f5d955",
+            "WIDGET1_ID": "64b5e9c71f5d990036f5d95c",
+            "WIDGET2_ID": "64b5e9c71f5d990036f5d956",
+            "WIDGET3_ID": "64b5e9c71f5d990036f5d957",
+            "WIDGET4_ID": "64b5e9c71f5d990036f5d960",
+            "WIDGET5_ID": "64b5e9c71f5d990036f5d95a"
         },
         "LIGHT_THEME_ID": "634ecbe6e9a102003742e7ff",
         "DARK_THEME_ID": "634ecbf6e9a102003742e801",
